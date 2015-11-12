@@ -110,7 +110,7 @@ $config['rest_realm'] = '6vSckuNrE0QNNPZVJNRVMHSw7X9wXS4j';
 |           authorization key
 |
 */
-$config['rest_auth'] = '';
+$config['rest_auth'] = FALSE;
 
 /*
 |--------------------------------------------------------------------------

@@ -74,12 +74,12 @@ $active_group = 'dfpnet';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> '',
+	'dsn'	=> 'mysql:dbname=crmdb;host=localhost',
 	'hostname' => 'localhost',
 	'username' => 'crmdbuser',
-	'password' => 'nDyW79sj4RFdLnKq',
+	'password' => '2cDD45mt9ntD7Kcy',
 	'database' => 'crmdb',
-	'dbdriver' => 'mysqli',
+	'dbdriver' => 'pdo',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
@@ -96,12 +96,12 @@ $db['default'] = array(
 );
 
 $db['dfpnet'] = array(
-	'dsn'	=> '',
+	'dsn'	=> 'mysql:dbname=dfp0100_crmdb;host=localhost',
 	'hostname' => 'localhost',
 	'username' => 'dfp0100_crmuser',
 	'password' => '&6nh4HJBF%MP',
 	'database' => 'dfp0100_crmdb',
-	'dbdriver' => 'mysqli',
+	'dbdriver' => 'pdo',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),

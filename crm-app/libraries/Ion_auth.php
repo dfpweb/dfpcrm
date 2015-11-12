@@ -60,7 +60,7 @@ class Ion_auth
 	public function __construct()
 	{
 		$this->load->config('ion_auth', TRUE);
-		$this->load->config('rest');
+		$this->load->config('rest', TRUE);
 		$this->load->library(array('email'));
 		$this->lang->load('ion_auth');
 		$this->load->helper(array('cookie', 'language','url'));
@@ -110,6 +110,19 @@ class Ion_auth
 		return call_user_func_array( array($this->ion_auth_model, $method), $arguments);
 	}
 
+
+	public function login_rest($username, $password) {
+		$rest_api = $this->config->item('rest_realm', 'rest');
+
+
+		if($this->ion_auth_model->login($username, $password)) {
+			return md5($username.":".$rest_api.":".$password);
+		}
+
+		else {
+			return false;
+		}
+	}
 
 	/**
 	 * __get

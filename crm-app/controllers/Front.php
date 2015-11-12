@@ -8,4 +8,9 @@ class Front extends CI_Controller {
 	{
 		$this->load->view('front_message');
 	}
+
+	public function manipolo() {
+
+		echo json_encode(array('msg'=>'CIAO'));
+	}
 }

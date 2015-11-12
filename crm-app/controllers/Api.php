@@ -7,20 +7,19 @@ class Api extends  REST_Controller
 {
 
     public function __construct() {
+
         parent::__construct();
 
-
-
         $this->load->library(array('ion_auth'));
-//        if (!$this->ion_auth->logged_in())
-//        {
-//            return $this->response(NULL, REST_Controller::HTTP_UNAUTHORIZED);
-//        }
-//        else {
-//
-//        }
-    }
 
+/*        if (!$this->ion_auth->logged_in())
+        {
+            return $this->response(NULL, REST_Controller::HTTP_UNAUTHORIZED);
+        }
+        else {
+
+        }*/
+    }
 
     public function users_get()
     {
@@ -92,5 +91,13 @@ class Api extends  REST_Controller
                 'message' => 'User could not be found'
             ], REST_Controller::HTTP_NOT_FOUND); // NOT_FOUND (404) being the HTTP response code
         }
+    }
+
+    private function _checkToken() {
+
+    }
+
+    private function _generateToken() {
+
     }
 }

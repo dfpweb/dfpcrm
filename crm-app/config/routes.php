@@ -52,5 +52,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'front';
 
 $route['api/users/(:num)'] = "api/users/id/$1";
+$route['api/jackson/(:any)'] = "api/jackson/content/$1";
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
